@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/register.css">
+</head>
+<body>
+<div class="wrapper">              
+    <div class="logo"><div class="container"><a href="#"></a></div></div>    
+    <div class="panel">
+        <div class="container">
+            <div class="panel-layout panel-login">
+                <div class="panel-tabs">
+                    <!-- <a href="javascript:void(0);" class="tabs-link select" id="loginTabs">扫码登录</a> -->
+                    <!-- <span class="line"></span> -->
+                    <a href="javascript:void(0);" class="tabs-link" class="loginCountTabs">账号登录</a>
+                </div>
+                <div class="panel-account login">
+                    <form action="#" method="POST">
+                        <label class="account-label" for="username">
+                            <input class="account-item" autocomplete="off" type="text" name="user" id="username-login" placeholder="QQ账号/手机号码">
+                        </label>
+                        <label class="account-label" for="pwd">
+                            <input class="account-item" type="password" placeholder="密码" autocomplete="off" id="pwd-login" name="password">
+                        </label>
+                        
+                        <input class="btn" id="btn-login" type="submit" value="登录">
+                        <div class="login-help clearfix">
+                            <a href="" class="login-switch iphone-denglu">手机快捷登录</a>
+                            <a href="" id="FORGET_PWD" class="forget-password">忘记密码？</a>
+                            <a href="" class="login-qq"><img src="img/qq.png" alt="" onclick="toLogin()"></a>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-account login-count">
+                    <form action="#" method="POST">
+                        <label class="account-label" for="username">
+                            <input class="account-item" autocomplete="off" type="text" name="user" id="username-login" placeholder="QQ账号/手机号码">
+                        </label>
+                        <label class="account-label" for="pwd">
+                            <input class="account-item" type="password" placeholder="密码" autocomplete="off" id="pwd-login" name="password">
+                        </label>
+                        
+                            <input class="btn" id="btn-login-count" type="submit" value="登录">
+                    </form>
+                    <form action="" class="iphone-login"></form>
+                </div>
+            </div>
+            <div class="panel-layout panel-iphone">
+                <div class="panel-tabs">
+                    <!-- <a href="javascript:void(0);" class="tabs-link select" id="loginTabs">扫码登录</a> -->
+                    <!-- <span class="line"></span> -->
+                    <a href="javascript:void(0);" class="tabs-link" id="loginCountTabs">手机验证登录</a>
+                </div>
+                <div class="panel-account login">
+                    <form action="#" method="POST">
+                        <label class="account-label" for="username">
+                            <input class="account-item" autocomplete="off" type="text" name="user"  placeholder="手机号码">
+                        </label>
+                        <label class="account-label" for="pwd">
+                            <input class="account-item iphone-yanzheng" type="password" placeholder="验证码" autocomplete="off"  name="password">
+                            <input class="houqu-yanzheng" type="button" value="获取验证码" onclick="sendemail()">
+                        </label>
+                        
+                        <input class="btn" type="submit" value="登录">
+                        <div class="login-help clearfix">
+                            <a href="javascript:void(0);" class="login-switch login-zhanghao">账号密码登录</a>
+                            <!-- <a href=""  class="forget-password">忘记密码？</a> -->
+                            <a href="" class="login-qq"><img src="img/qq.png" alt="" onclick="toLogin()"></a>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="JS/ajax.js"></script>
+    <script src="JS/login.js"></script>
+
+    <script>
+            function toLogin()
+            {
+              //以下为按钮点击事件的逻辑。注意这里要重新打开窗口
+              //否则后面跳转到QQ登录，授权页面时会直接缩小当前浏览器的窗口，而不是打开新窗口
+              var A=window.open("php/index.php","TencentLogin", "width=450,height=320,menubar=0,scrollbars=1,resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+            }
+
+
+            // 倒计时
+            var countdown=60; 
+            function sendemail(){
+                var obj = $(".houqu-yanzheng");
+                settime(obj);
+                
+                }
+            function settime(obj) { //发送验证码倒计时
+                if (countdown == 0) { 
+                    obj.attr('disabled',false); 
+                    //obj.removeattr("disabled"); 
+                    obj.val("免费获取验证码");
+                    countdown = 60; 
+                    return;
+                } else { 
+                    obj.attr('disabled',true);
+                    obj.val("重新发送(" + countdown + ")");
+                    countdown--; 
+                } 
+            setTimeout(function() { 
+                settime(obj) }
+                ,1000) 
+            }
+
+            // 页面跳转
+            $(".login-zhanghao").on("click",function(){
+                $(".panel-iphone").css("display","none");
+                $(".panel-login").css("display","block");
+            })
+            $(".iphone-denglu").on("click",function(){
+                $(".panel-iphone").css("display","block");
+                $(".panel-login").css("display","none");
+            })
+    </script>
+</body>
+</html>

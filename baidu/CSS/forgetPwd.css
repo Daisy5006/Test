@@ -1,0 +1,219 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+a:hover{
+	text-decoration: none;
+	color: #333;
+}
+.container{
+	width: 600px;
+	height: auto;
+    margin: 0px auto;
+    margin-top: 150px;
+}
+.container input{
+	display:none;
+}
+nav{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	display: flex;
+	background-color: #007acc;
+}
+nav>li{
+	font-size: 20px;
+	flex: 1;
+	text-align: center;
+	color: #fff;
+}
+nav>li>label{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.box{
+	width: 100%;
+    height:auto;
+    margin-top: 30px;
+	background: #fff;
+}
+.box ul{
+	padding: 20px 30px;
+	display: none;
+}
+#count:checked~nav>.count{
+	background-color: #ccc;
+}
+#count:checked~.box>.countList{
+	display: block;
+}
+#person:checked~nav>.person{
+	background-color: #ccc;
+}
+#person:checked~.box>.personList{
+	display: block;
+}
+#repwd:checked~nav>.repwd{
+	background-color: #ccc;
+}
+#repwd:checked~.box>.repwdList{
+	display: block;
+}
+#resuccess:checked~nav>.resuccess{
+	background-color: #ccc;
+}
+#resuccess:checked~.box>.resuccessList{
+	display: block;
+}
+.box .countList{
+   margin-left: 60px;
+}
+.countList .input-box{
+    width: 378px;
+    height: 38px;
+    border: 1px solid #ccc;
+    line-height: 38px;
+    margin-bottom: 25px;
+}
+.countList .input-box .title{
+    float: left;
+    width: 76px;
+    padding-left: 11px;
+}
+.countList .input-wrapper{
+    width: 291px;
+}
+.countList .input-box .input-wrapper{
+    position: relative;
+    float: left;
+    height: 100%;
+}
+.countList .input-box .input-wrapper input{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    color: #333;
+    border: 0;
+    background: 0;
+}
+
+.countList .input-box .input-wrapper .placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    color: #cacaca;
+    cursor: text;
+}
+ .count-submit{
+    margin-top: 30px;
+     background: #007acc;
+     color: #fff;
+     border: none;
+     width: 378px;
+     height: 40px;
+}
+.personList .msg-field .input-box{
+    width: 378px;
+    height: 38px;
+    border: 1px solid #ccc;
+    line-height: 38px;
+    margin-bottom: 25px;
+}
+.personList .msg-field .input-box .title{
+    float: left;
+    width: 86px;
+    padding-left: 11px;
+}
+.personList .msg-field .input-wrapper{
+    width: 142px;
+    position: relative;
+    float: left;
+    height: 100%;
+}
+.personList .msg-field .send-msg {
+    float: left;
+    width: 148px;
+    height: 100%;
+    line-height: 38px;
+    text-align: center;
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #bbb;
+    font-size: 12px;
+   margin: -39px 0 0 239px;
+    text-decoration: none;
+}
+.personList .input-box .input-wrapper .placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #cacaca;
+    cursor: text;
+}
+.personList .input-box .input-wrapper input {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    color: #333;
+    border: 0;
+    background: 0;
+}
+.repwdList .input-box{
+    width: 378px;
+    height: 38px;
+    border: 1px solid #ccc;
+    line-height: 38px;
+    margin-bottom: 25px;
+}
+.repwdList .input-box .title{
+    float: left;
+    width: 76px;
+    padding-left: 11px;
+}
+.repwdList .input-wrapper{
+    width: 291px;
+}
+.repwdList .input-box .input-wrapper{
+    position: relative;
+    float: left;
+    height: 100%;
+}
+.repwdList .input-box .input-wrapper input{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    color: #333;
+    border: 0;
+    background: 0;
+}
+
+.repwdList .input-box .input-wrapper .placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #cacaca;
+    cursor: text;
+}
+.resuccessList p{
+    margin-left: 130px;
+}
+.

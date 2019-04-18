@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CDN</title>
+    <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/center.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <!-- <script>
+        var hasLogin = true; var isFillPersonInfo = true; var showApply = true;        </script> -->
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="warning" style="display:none;">您的浏览器版本过低，为了不影响您的使用，请使用Chrome，Firefox，Safari或者IE9以上的浏览器，国产浏览器请使用极速模式
+        </div>
+        <div id="header" class="container">
+            <div class="section">
+                <div id="logo">
+                    <!-- <img src="" alt=""> -->
+                    <span>P2P&nbsp;CDN</span>
+                </div>
+                <ul id="nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="mining.html">机器监控</a></li>
+                    <li><a href="account.html">收益管理</a></li>
+                    <li><a href="super.html">机器提交</a></li>
+                </ul>
+                <div id="user-entry">
+                    <div class="topbar-info clearfix">
+                        <a href="login.html" class="title-login">登录</a><span>|</span>
+                        <a href="register.html" class="title-register">注册</a><span>|</span>
+                        <a href="" class="sep">消息通知</a>
+                    </div>
+                    <div id="user-entry-list">
+                        <div><a href="center.html">个人中心</a></div>
+                        <div><a id="logout-entry">退出登录</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="personal-nav">
+            <nav>
+                <ul>
+                    <li class="person">
+                        <label for="person">个人中心</label>
+                    </li>
+                    <li class="account nav-List">
+                        <label for="account">账户信息</label></li>
+                    <li class="machine nav-List">
+                        <label for="machine">机器申请</label>
+                    </li>
+
+                    <li class="preference nav-List">
+                        <label for="preference">偏好设置</label>
+                    </li>
+                    <li class="resource nav-List">
+                        <label for="preference">资源提交</label>
+                    </li>
+                </ul>
+
+            </nav>
+            <!--账户信息-->
+            <div class="box">
+                <div class="accountList">
+                    <span class="account-icon"></span>
+                    <span>账户信息</span>
+                    <div class="account-basines">
+                        <h4>业务信息</h4>
+                        <div class="type">
+                            <span style="margin-right:40px">机器类型</span>
+                            <img src="" alt="">
+                            <span style="color:#cda15f">超级机器</span>
+                        </div>
+                        <div class="identifit">
+                            <span>认证信息</span>
+                            <span style="color:#cda15f;margin-left: 40px;margin-right: 20px">实名认证</span>
+                            <span style="background:#03CCB6;color: #fff;">已认证</span>
+                        </div>
+                    </div>
+                    <div class="account-personal">
+                        <h4>个人信息</h4>
+                        <ul>
+                            <li>
+                                <span>百度账号</span>
+                                <input type="text" id="">
+                            </li>
+                            <li>
+                                <span>QQ</span>
+                                <input type="text" id="qq-cin" placeholder="123456" disabled="true">
+                                <button id="QQ" class="revise qq-btn">修改</button>
+                                <button class="revise qq-baocun">保存</button>
+                                <button class="revise qq-quxiao">取消</button>
+                            </li>
+                            <!-- <li>
+                                <span>邮箱</span>
+                                <input type="text" id="emial-cin" placeholder="12456789@163.com" disabled="true">
+                                <button id="email" class="revise emial-btn">修改</button>
+                                <button class="revise emial-baocun">保存</button>
+                                <button class="revise emial-quxiao">取消</button>
+                            </li> -->
+                            <li>
+                                <span>手机</span>
+                                <input type="text" id="phone-cin" placeholder="15421593154 " disabled="true">
+                                <button id="number" class="revise">修改</button>
+                                <button class="revise iphone-baocun">保存</button>
+                                <button class="revise iphone-quxiao">取消</button></br>
+                                <input type="text" placeholder="验证码" class="yzm">
+                                <button class="yzm-btn revise" onclick="sendemail()">获取验证码</button>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--机器申请列表-->
+            <div class="box">
+                <div class="machineList">
+                    <span class="account-icon"></span>
+                    <span>机器列表</span>
+                    <table class="table-list" rules="rows" frame="hsides">
+                        <tr class="table-list-header">
+                            <td class="table-list-number">序号</td>
+                            <td class="table-list-local">带宽地域分布</td>
+                            <td class="table-list-up">上行带宽</td>
+                            <td class="table-list-storage">空间存储</td>
+                            <td class="table-list-OS">操作系统</td>
+                            <td class="table-list-IP">IP地址</td>
+                            <td class="table-list-status">状态</td>
+                            <td class="table-list-operate">操作</td>
+                        </tr>
+                        <tr class="table-list-item">
+                            <td class="table-list-number">1</td>
+                            <td class="table-list-local">湖南省/岳阳市/电信</td>
+                            <td class="table-list-up">10000Mbp</td>
+                            <td class="table-list-storage">32TB</td>
+                            <td class="table-list-OS">cent os 6.5</td>
+                            <td class="table-list-IP">119.39.247.190</td>
+                            <td class="table-list-status">已上线</td>
+                            <td class="table-list-operate"></td>
+                        </tr>
+                    </table>
+                    <div class="machineList-pager">
+                        <button class="previous">上一页</button>
+                        <button class="next">下一页</button>
+                    </div>
+                </div>
+            </div>
+            <!--偏好设置-->
+            <div class="box">
+                <div class="preferenceList">
+                    <span class="account-icon"></span>
+                    <span>短信提醒配置</span>
+                    <form action="">
+                        <label class="remind"><input type="radio" />开启短信提醒</label>
+                    </form>
+                </div>
+            </div>
+            <!--资源提交-->
+            <div class="box">
+                <div class="resourceList">
+
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div id="footer" class="container">
+        <div class="section">
+            <div id="contact-list">
+                <div class="contact">©2019 bendian &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="http://www.baidu.com/duty/">使用前必读 </a>&nbsp;&nbsp;|
+                    &nbsp;&nbsp; 联系我们: bdkjcdn.com
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script>
+        // 选项卡
+        // 默认第一个显示
+        $(".nav-List").eq(0).addClass("active");
+        $(".box").eq(0).css("display", "block");
+        $(".nav-List").click(function () {
+            // 获取当前li的索引值
+            var index = $(this).index();
+            // 清除所有的li中的active类，将右侧box全部隐藏
+            $(".box").css("display", "none");
+            $(".nav-List").removeClass("active");
+            // 给当前的li添加acive，现在当前索引值的box
+            $(this).addClass("active");
+            $(".box").eq(index - 1).css("display", "block");
+        })
+
+
+        // 右边按钮显示隐藏
+        // QQ
+        // qq的修改按钮
+        var place = $("#qq-cin").attr("placeholder");
+        $(".qq-btn").click(function () {
+            $("#qq-cin").css({
+                border: "1px solid black",
+            })
+            $("#qq-cin").attr("disabled", false);
+            $("#qq-cin").val(place);
+            $(".qq-quxiao").css("display", "inline-block");
+            $(this).css("display", "none");
+            $(".qq-baocun").css("display", "inline-block");
+        })
+        // qq的取消按钮
+        $(".qq-quxiao").click(function () {
+            $("#qq-cin").css({
+                border: "none",
+            })
+            $("#qq-cin").attr("disabled", true);
+            console.log(place);
+            $(".qq-quxiao").css("display", "inline-block");
+            $(".qq-baocun").css("display", "none");
+            $(".qq-btn").css("display", "inline-block");
+            $(this).css("display", "none");
+            $("#qq-cin").attr("placeholder", place);
+        })
+        // qq的保存按钮
+        $(".qq-baocun").click(function () {
+            $("#qq-cin").css({
+                border: "none",
+            })
+            $("#qq-cin").attr("disabled", true);
+            place = $("#qq-cin").val();
+            $("#qq-cin").attr("placeholder", place);
+            $(".qq-quxiao").css("display", "inline-block");
+            $(".qq-quxiao").css("display", "none");
+            $(".qq-btn").css("display", "inline-block");
+            $(this).css("display", "none");
+            place = $("#qq-cin").attr("placeholder");
+        })
+
+        // 手机号码
+        // 手机号码的修改按钮
+        var place = $("#phone-cin").attr("placeholder");
+        $("#number").click(function () {
+            $("#phone-cin").css({
+                border: "1px solid black",
+            })
+            $("#phone-cin").attr("disabled", false);//解除禁用操作
+            $("#phone-cin").val(place);//可以输入修改的值
+            $(".iphone-quxiao").css("display", "inline-block");
+            $(this).css("display", "none");
+            $(".iphone-baocun").css("display", "inline-block");
+            $(".yzm").css("display","inline-block");
+            $(".yzm-btn").css("display","inline-block");
+        })
+        // 手机号码的取消按钮
+        $(".iphone-quxiao").click(function () {
+            $("#phone-cin").css({
+                border: "none",
+            })
+            $("#phone-cin").attr("disabled", true);
+            console.log(place);
+            $(".iphone-quxiao").css("display", "inline-block");
+            $(".iphone-baocun").css("display", "none");
+            $("#number").css("display", "inline-block");
+            $(this).css("display", "none");
+            $("#phone-cin").attr("placeholder", place);
+            $(".yzm").css("display","none");
+            $(".yzm-btn").css("display","none");
+        })
+        // 手机号码的保存按钮
+        $(".iphone-baocun").click(function () {
+            $("#phone-cin").css({
+                border: "none",
+            })
+            $("#phone-cin").attr("disabled", true);
+            place = $("#phone-cin").val();
+            $("#phone-cin").attr("placeholder", place);
+            $(".iphone-quxiao").css("display", "inline-block");
+            $(".iphone-quxiao").css("display", "none");
+            $("#number").css("display", "inline-block");
+            $(this).css("display", "none");
+            place = $("#phone-cin").attr("placeholder");
+            $(".yzm-btn").css("display","none");
+            $(".yzm").css("display","none");
+        })
+  
+        // 倒计时
+        var countdown = 60;
+
+        function sendemail() {
+            var obj = $(".yzm-btn");
+            settime(obj);
+        }
+        function settime(obj) { //发送验证码倒计时
+            if (countdown == 0) {
+                obj.attr('disabled', false);
+                //obj.removeattr("disabled"); 
+                obj.html("重新获取");
+                countdown = 60;
+                return;
+            } else {
+                obj.attr('disabled', true);
+                obj.html("重新发送(" + countdown + ")");
+                countdown--;
+            }
+            setTimeout(function () {
+                settime(obj)
+            }, 1000)
+        }
+      
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CDN</title>
+    <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/mining.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="warning" style="display:none;">您的浏览器版本过低，为了不影响您的使用，请使用Chrome，Firefox，Safari或者IE9以上的浏览器，国产浏览器请使用极速模式</div>
+        <div id="header" class="container">
+            <div class="section">
+                <div id="logo">
+                    <img src="" alt="">
+                    <span>P2P&nbsp;CDN</span>
+                </div>
+                <ul id="nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li  class="active"><a href="mining.html">机器监控</a></li>
+                    <li><a href="account.html">收益管理</a></li>
+                    <li><a href="super.html">机器提交</a></li>
+                </ul>               
+                <div id="user-entry">
+                    <div class="topbar-info clearfix">
+                        <a href="login.html" class="title-login">登录</a><span>|</span>
+                        <a href="register.html" class="title-register">注册</a><span>|</span>
+                        <a href="" class="sep">消息通知</a>
+                    </div>
+                    <div id="user-entry-list">
+                        <div><a href="center.html">个人中心</a></div>
+                        <div><a id="logout-entry">退出登录</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="container">
+            <div class="section">
+<div id="mining-overview-container">
+    <div id="mining-overview-header">
+        <div id="mining-overview-title">机器概况</div>
+        <div id="mining-overview-date">更新时间 : <span ng-bind="overview.updateDate">2019-04-12 10:54:29</span></div>
+    </div>
+    <div id="mining-overview-content">
+        <div id="machine-count" class="overview-item ">
+            <div class="item-content">
+                <div class="item-title">
+                    机器数
+                    <span id="machine-tip">?</span>
+                </div>
+                <div class="item">
+                    <span class="item-value" ng-bind="overview.machine">0</span>
+                    <span class="item-unit">台</span>
+                </div>
+            </div>
+        </div>
+        <div id="upload-speed" class="overview-item ">
+            <div class="item-content">
+                <div class="item-title">
+                    总上传速度
+                    <span id="speed-tip">?</span>
+                </div>
+                <div class="item">
+                    <span class="item-value" ng-bind="overview.uploadSpeed">0</span>
+                    <span class="item-unit">B/s</span>
+                </div>
+            </div>
+        </div>
+        <div id="outcome" class="overview-item ">
+            <div class="item-content">
+                <div class="item-title">
+                    今日峰值
+                </div>
+                <div class="item">
+                    <span class="item-value" title="0个">0</span>
+                    <span class="item-unit">bps</span>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="item-content">
+                <div class="item-title">
+                    昨日峰值
+                </div>
+                <div class="item">
+                    <span class="item-value" title="0个">0</span>
+                    <span class="item-unit">bps</span>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="item-content">
+                <div class="item-title" style="width: 100px;">
+                    历史总峰值
+                    <span id="outcome-tip">?</span>
+                </div>
+                <div class="item">
+                    <span class="item-value" title="56706524000个">0</span>
+                    <span class="item-unit">bps</span>
+                </div>
+            </div>
+        </div>
+                </div>
+</div>
+<div id="mining-detail-container">
+    <div id="mining-detail-header">
+        <div id="mining-detail-title">机器详情</div>
+        <ul id="mining-detail-nav">
+            <li class="selected" data-type="all">全部 0 台</li>
+            <li data-type="online">在线 0 台</li>
+            <li data-type="offline">离线 <span style="color:#e66e5c;">0</span> 台</li>
+        </ul>
+        <div id="max-machine" style="float: right;padding: 0px 15px;font-size: 14px;height: 50px;line-height: 50px;">专业版机器可同时在线22台, 还可上线22台</div>
+    </div>
+    <div id="mining-detail" style="position:relative;overflow:hidden;">
+        <div style="position:relative;">
+            <table border="0">
+                <thead>
+                    <tr>
+                        <th align="center" width="75px">
+                            序号
+                        </th>
+                        <th align="left" width="120px">
+                            机器IP地址
+                        </th>
+                       
+                        <th align="left" width="120px">
+                            缓存占用
+                        </th>
+                        <th align="left" width="99px">
+                            今日产出(分)
+                        </th>
+                        <th align="left" width="99px">
+                            昨日产出(分)
+                        </th>
+                        <th align="left" width="99px">
+                            历史产出(分)
+                        </th>
+                        <th align="left" width="50px">
+                            状态
+                        </th>
+                        <th align="left">
+                            更新时间
+                        </th>
+                        <!-- <th align="left"></th> -->
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+                        </div>
+                    <div id="table-nav">
+            <button class="btn negative-btn">跳转</button>
+            <input type="text">
+            <div id="next-page" class="pagination">
+                <span></span>
+            </div>
+            <div id="nav-status">0/0</div>
+            <div id="last-page" class="pagination">
+                <span></span>
+            </div>
+        </div>
+        <div id="machine-chart-container" class="chart-container">
+            <div id="machine-chart-header" class="chart-header">机器速度趋势图<span style="font-size:12px;padding-left:10px;color:#999;">默认展示速度排名前五的机器</span></div>
+            <div id="machine-chart" class="chart"></div>
+        </div>
+        <div id="personal-chart-container" class="chart-container">
+            <div id="personal-chart-header" class="chart-header">个人机器VS全局机器平均速度趋势图</div>
+            <div id="personal-chart" class="chart"></div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="tip"></div>
+<script>
+var userSpeed = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var globalSpeed = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var detailList = [];
+var temp = [];
+for (var key in detailList) {
+    if (detailList.hasOwnProperty(key)) {
+        temp.push(detailList[key]);
+    }
+}
+detailList = temp;
+</script>
+        </div>
+    </div>
+    <div id="footer" class="container">
+        <div class="section">
+            <div id="contact-list">
+                <div class="contact">©2019 bendian &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="http://www.baidu.com/duty/">使用前必读 </a>&nbsp;&nbsp;|
+                    <!-- &nbsp;&nbsp; <a href="/site/help">帮助中心 </a>&nbsp;&nbsp;| -->
+                    &nbsp;&nbsp; 联系我们: bdkjcdn.com
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="JS/jquery-1.12.3.min.js"></script>
+<script src="JS/ua-parser.min.js"></script>
+<script src="JS/uni_login_wrapper.js"></script>
+<script>
+</script>
+
+<script src="JS/common.js"></script>
+        <script src="JS/echarts-all.js"></script>
+        <script src="JS/mining.js"></script>
+
+</html>

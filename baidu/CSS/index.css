@@ -1,0 +1,86 @@
+
+#banner-list img{
+  width: 100%;
+  height: 458px;
+}
+
+#about {
+  height: 440px; }
+
+#about p {
+  width: 100%;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  font-size: 14px;
+  color: #838383; }
+
+#about-img {
+  width: 100%;
+  height: 119px;
+  margin-top: 54px;
+  background: url(../img/about-img.png) no-repeat center center;
+  background-size: 695px 119px; }
+
+#how {
+  height: 490px;
+  background-color: #fff; }
+
+.how-step {
+  display: inline-block;
+  width: 325px;
+  margin-top: 58px; }
+
+.step-count {
+  width: 104px;
+  height: 104px;
+  margin: 0px auto;
+  margin-bottom: 28px; }
+
+.how-step:nth-of-type(2) .step-count {
+  background: url(../img/download.png) no-repeat center center;
+  background-size: 104px 104px; }
+
+.how-step:nth-of-type(1) .step-count {
+  background: url(../img/change.png) no-repeat center center;
+  background-size: 104px 104px; }
+
+.how-step:nth-of-type(3) .step-count {
+  background: url(../img/gift.png) no-repeat center center;
+  background-size: 104px 104px; }
+
+.step-title {
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #565656; }
+
+.step-content {
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 13px;
+  color: #838383; }
+
+#design {
+  height: 390px;
+  background: url(../img/design-bg.jpg) no-repeat center center;
+  background-color: #3d4545;
+  background-size: 1600px 390px; }
+
+#design .section-title {
+  color: #fff;
+  margin-bottom: 72px; }
+
+#design-img {
+  width: 100%;
+  height: 101px;
+  margin-top: 86px;
+  background: url(../img/design-img.png) no-repeat center center;
+  background-size: 894px 101px;
+  opacity: 0.9; }
+

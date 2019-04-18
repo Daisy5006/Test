@@ -1,0 +1,117 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+   
+    margin: 0 auto;
+    
+}
+.register-header{
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.register-header span:first-child{
+    position: relative;
+     font-size: 34px;
+}
+.register-header span:nth-child(2){
+    color: #666;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.register-header span:nth-child(3){
+    float: right;
+    font-size: 12px;
+    margin-top: 50px;
+}
+.register-header p{
+   margin-top: -10px;
+   margin-left: 10px;
+    font-size: 22px;
+}
+.register-content{
+    background: #fff;
+     width: 1000px;
+     height:450px ;
+     margin: 0 auto;
+     border-top: 3px solid #0074E8;
+}
+.reg-form{
+    width: 378px;
+    margin: 0 auto;
+    padding-top: 100px;
+    font-size: 12px;
+}
+.reg-form .input-box{
+    width: 378px;
+    height: 38px;
+    border: 1px solid #ccc;
+    line-height: 38px;
+    margin-bottom: 25px;
+}
+.reg-form .input-box .title{
+    float: left;
+    width: 76px;
+    padding-left: 11px;
+}
+.phone-field .input-wrapper{
+    width: 291px;
+}
+.reg-form .input-box .input-wrapper{
+    position: relative;
+    float: left;
+    height: 100%;
+}
+.reg-form .input-box .input-wrapper input{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    color: #333;
+    border: 0;
+    background: 0;
+}
+
+.reg-form .input-box .input-wrapper .placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #cacaca;
+    cursor: text;
+}
+.reg-form .msg-field .input-wrapper{
+    width: 142px;
+}
+.reg-form .msg-field .send-msg {
+    float: left;
+    width: 148px;
+    height: 100%;
+    line-height: 38px;
+    text-align: center;
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #bbb;
+    font-size: 12px;
+    margin: -1px -1px 0 0;
+    text-decoration: none;
+}
+.reg-form .password-field .input-wrapper, .reg-form .phone-field .input-wrapper {
+    width: 291px;
+}
+.reg-form .submit-btn{
+    width: 100%;
+    line-height: 40px;
+    background: #0074E8;
+    font-size: 20px;
+    color: #fff;
+    margin: 24px 0 5px;
+    border: none;
+}

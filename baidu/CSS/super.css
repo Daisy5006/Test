@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+#header{
+    background-color: #f8f8f8;
+}
+.machineApply{
+    font-size: 14px;
+    color: #9a9a9a;  
+}
+#machineLocal{
+    margin-top: 40px;
+    
+}
+#machineLocal span{
+    margin-left:344px;
+    margin-right: 20px;
+    
+}
+#machineLocal select{
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #565656;
+}
+.machineMessage{
+   margin-left: 344px;
+}
+.machineMessage li{
+    margin-top: 30px;
+}
+.machineMessage li .machineTip{
+    background: rgba(41, 117, 230,0.5);
+    color: #fff;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+.machineMessage li span{
+    margin-right: 20px;
+}
+.machineMessage li input{
+    display: inline-block;
+    outline-color: #565656;
+}
+.machineMessage li label{
+    margin-left: 40px;
+}
+#machine-button{
+   margin: 30px auto;
+     
+   margin-left: 600px; 
+}
+.machineJoin,
+.machine-submit{
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    background: #52BA2F;
+    border: none;
+    color: #fff;
+}

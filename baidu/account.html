@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CDN</title>
+    <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/account.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="warning" style="display:none;">您的浏览器版本过低，为了不影响您的使用，请使用Chrome，Firefox，Safari或者IE9以上的浏览器，国产浏览器请使用极速模式</div>
+        <div id="header" class="container">
+            <div class="section">
+                <div id="logo">
+                    <!-- <img src="" alt=""> -->
+                    <span>P2P&nbsp;CDN</span>
+                </div>
+                <ul id="nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="mining.html">机器监控</a></li>
+                    <li  class="active"><a href="account.html">收益管理</a></li>
+                    <li><a href="super.html">机器提交</a></li>
+                </ul>               
+                <div id="user-entry">
+                    <div class="topbar-info clearfix">
+                        <a href="login.html" class="title-login">登录</a><span>|</span>
+                        <a href="register.html" class="title-register">注册</a><span>|</span>
+                        <a href="" class="sep">消息通知</a>
+                    </div>
+                    <div id="user-entry-list">
+                        <div><a href="center.html">个人中心</a></div>
+                        <div><a id="logout-entry">退出登录</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="container">
+            <script type="text/javascript">
+        var permission = false;
+    var status = 1;
+var comment = ' ';
+var userType = 2;
+</script>
+<div class="section">
+<div id="account-overview-container">
+    <div id="account-overview-header">
+        <div id="account-overview-title">收益概况</div>
+        <!-- <div id="account-overview-data">更新时间:2015-11-28 11:23:22</div> -->
+    </div>
+    <div id="account-overview-content">
+        <div id="available-overview" class="overview-item">
+            <div class="item-content">
+                <div class="item-title">
+                    当月收益
+                    <span id="cryst-available">?</span>
+                </div>
+                <div class="item">
+                    <span class="item-value">27,292,646</span>
+                    <span class="item-unit">分</span>
+                </div>
+            </div>
+            <div class="item-detail">
+                产出:
+                今日 <span style="font-weight:bold;color:#000;">0</span> 分;
+                昨日 <span style="font-weight:bold;color:#000;">0</span> 分
+                <!-- 历史总计 <span style="font-weight:bold;color:#000;">56.7万</span> 个 -->
+            </div>
+        </div>
+        <div class="overview-item" id="income-overview">
+            <div class="item-content">
+                <div class="item-title">
+                    历史收益
+                    <span id="cryst-income">?</span>
+                </div>
+                <div class="item">
+                    <span class="item-value">272,926.46</span>
+                    <span class="item-unit">元</span>
+                </div>
+            </div>
+            <div class="item-detail">
+                产出:
+                今日 <span style="font-weight:bold;color:#000;">0.00</span> 元;
+                昨日 <span style="font-weight:bold;color:#000;">0.00</span> 元
+                <!-- 历史总计 <span style="font-weight:bold;color:#000;">567.06千</span> 元 -->
+            </div>
+        </div>
+        <div class="overview-item" id="remain-overview">
+
+            <div class="item-content" style="padding-right: 20px;" >
+                <div class="item-title">
+                可转出余额(5月1日前收益)
+                    <span id="cryst-remain">?</span>
+                </div>
+                <div class="item">
+                    <span class="item-value">293,934.34</span>
+                    <span class="item-unit">元</span>
+                    <a class="btn positive-btn transfer-unable" href="#"  id="transfer-btn">转出余额</a>
+                    
+                </div>
+                    <div class="item-detail" style="padding-left: 0px;height: 20px;line-height: 20px;">
+                    总余额 <span style="font-weight:bold;color:#000;">293,934.34 </span>元
+                 <a href="javascript:void(0);" class="transfer-info-link transfer-info-unable" style="text-decoration: underline;">转出记录</a>
+                 <!-- <a class="user-author-pass" style="float: right;margin-top: 0px;line-height: 20px;
+                    text-align: right;"> </a> -->
+                </div>
+            </div>
+
+            <div class="item-detail">
+
+                月比较<span class="down"></span><span style="font-weight:bold;color:#000;">-11</span> %;
+                
+                历史总余额 <span style="font-weight:bold;color:#000;">293,934.34 </span>元
+            </div>
+        </div>
+    </div>
+    <div id="account-detail-container">
+        <div id="account-detail-header">
+            <div id="account-detail-title">收益产出详情</div>
+            <ul id="account-detail-nav">
+                <li id="outcome-nav" class="selected">收益情况</li>
+                <li id="income-nav">收入(税前)</li>
+            </ul>
+            <div id="account-detail-selector-container">
+                <div style="float:left;">时间</div>
+                <div id="selector">
+                    <div data-day="7" class="selector-item outcome selected">7日</div>
+                    <div data-day="14" class="selector-item outcome">14日</div>
+                    <div data-day="30" class="selector-item outcome">30日</div>
+                </div>
+            </div>
+        </div>
+        <div id="account-detail">
+            <div id="chart-container">
+                <div id="chart-header">趋势图</div>
+                <div id="chart"></div>
+            </div>
+            <div id="table-container">
+                <div id="table-header">详细数据</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="135px">时间</th>
+                            <th width="180px">抵扣消费金额</th>
+                            <th width="180px">结算金额</th>
+                            <th width="200px">结算收益(税前)</th>
+                            <th width="115px">代扣个税</th>
+                            <th>收入(税后)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div id="table-nav">
+                    <button class="btn negative-btn">跳转</button>
+                    <input type="text">
+                    <div id="next-page" class="pagination">
+                        <span></span>
+                    </div>
+                    <div id="nav-status">0/0</div>
+                    <div id="last-page" class="pagination">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="tip"></div>
+<div id="layer">
+<div id="popup">
+    <div id="popup-header">
+        <div id="popup-header-icon"></div>
+        <div id="popup-header-title">金矿-金币转出</div>
+        <div id="popup-header-close" class="close"></div>
+    </div>
+    <div class="popup-content" id="has-content">
+        <div class="popup-alert-title">
+            转出功能尚未开通，敬请期待！
+        </div>
+        <button class="btn positive-btn close">确定</button>
+    </div>
+</div>
+</div>
+<div id="authorization-layer" class="authorization-layer">
+<div class="authorization-container">
+    <div class="authorization-header">
+        <div class="header-icon"></div>
+        <div class="header-title">金矿</div>
+        <div id="header-close" class="header-close"></div>
+    </div>
+    <div id="authorization-content">
+        <form action="/attachment/save" method="post" id="authorization-form" enctype="multipart/form-data" encoding="multipart/form-data">
+            <p class="authorization-error-panel"></p>
+            <p class="input-item">
+                <label>姓名</label>
+                <input type="text" name="userName"/>
+            </p>
+            <p class="input-item">
+                <label>现居地</label>
+                <input type="text" name="address"/>
+            </p>
+            <p class="input-item">
+                <label>身份证号</label>
+                <input type="text" name="idCardNum"/>
+            </p>
+            <p class="input-item" style="height: 30px;display:inline-block;">证件照</p>
+            <span style="font-size:12px;color:#999;margin-left:15px;">仅支持图片格式文件，大小不超过2M</span>
+            <div id="upload-panel">
+                <label for="id-front-input" id="id-front" class="add">
+                    <img border=0 src="/static/add-upload.png" width="50px" height="50px"/>
+                    <div class="upload-hover">上传</div>
+                </label>
+                <label for="id-back-input" id="id-back" class="add">
+                    <img border=0 src="/static/add-upload.png" width="50px" height="50px"/>
+                    <div class="upload-hover">上传</div>
+                </label>
+                <label for="id-hold-input" id="id-hold" class="add">
+                    <img border=0 src="/static/add-upload.png" width="50px" height="50px"/>
+                    <div class="upload-hover">上传</div>
+                </label>
+                <input type="file" class="upload-input" name="idFront" id="id-front-input" style="display:none;" accept="image/*">
+                <input type="file" class="upload-input" name="idBack" id="id-back-input" style="display:none;" accept="image/*">
+                <input type="file" class="upload-input" name="idHold" id="id-hold-input" style="display:none;" accept="image/*">
+            </div>
+            <div id="upload-labels">
+                <span>身份证正面照</span>
+                <span>身份证反面照</span>
+                <span>手持身份证照</span>
+            </div>
+                            <p class="input-item" id="author-label" style="height: 30px;margin-top:10px;">
+                授权书
+                <a href="/attachment/download-authorization" style="font-size:12px;">(下载)</a>
+            </p>
+            <label id="upload-author" for="author-file-input">
+                <span>上传授权书</span>
+                <input type="file" name="authorFile" id="author-file-input" style="display:none;" accept="image/*">
+            </label>
+                        </form>
+    </div>
+    <div id="authorization-btn-group" class="authorization-btn-group">
+        <button class="btn positive-btn">提交</button>
+        <button class="btn negative-btn">取消</button>
+    </div>
+</div>
+</div>
+<div id="protocol-layer" class="authorization-layer">
+<div class="authorization-container">
+    <div class="authorization-header">
+        <div class="header-icon"></div>
+        <div class="header-title">金矿</div>
+        <div id="protocol-header-close" class="header-close"></div>
+    </div>
+    <div id="install-protocol" class="protocol">
+        <p class="protocol-title">本电金矿用户协议</p>
+        <div class="protocol-content">
+            <p>请仔细阅读本协议，百度金矿将依据以下条件和条款为您提供服务。</p>
+            <p>欢迎阅读本电金矿用户协议(下称“本协议”)。本协议阐述之条款和条件适用于用户使用百度金矿所提供的普通矿机服务(下称“服务”)</p>
+            <ol>
+                <li>
+                    <p>一、服务条款的确认</p>
+                    <p>1.本电根据本协议向用户提供服务，本服务条款具有合同法上的法律效力。</p>
+                    <p>2.如果用户对协议的任何条款表示异议，用户可以选择不同意，一旦您点选“同意”，即表示用户自愿接受本协议之所有条款，并开通百度金矿普通矿机服务。</p>
+                </li>
+                <li>
+                    <p>二、服务内容</p>
+                    <p>1.本电金矿（baijin.baidu.com）是宁波本电科技的一款用户通过贡献闲置带宽/流量来获取报酬的产品，
+                    系本电公司所有并运营的平台。本电金矿的所有权和运营权归本电公司所有。</p>
+                    <p>2.用户需为百度提供设备、带宽和公网IP接入Internet，并协助本电进行软件安装、联网调测。</p>
+                    <p>3.用户自行负担运行过程中所产生的与此服务有关的设备费用、网络费用等。</p>
+                    <p>4.依本服务注册表的提示提供用户本人真实、正确、最新及完整的资料。</p>
+                    <p>5.维持更新用户个人用户信息，确保其真实、正确、最新及完整。</p>
+                </li>
+                <li>
+                    <p>三、用户权责</p>
+                    <p>1.用户有权按照百度金矿平台规定的程序和要求使用百度向普通矿机用户提供的各项网络服务，如果用户对该服务有异议，可以与百度联系以便得到及时解决。</p>
+                    <p>2.用户拥有提供带宽资源的服务器的所有权和使用权。因用户权属瑕疵产生的纠纷，应当积极解决并保证百度不受此影响。在此情况下百度有权解除合同并不退还及支付任何款项，若因纠纷给百度带来损失，用户应当承担赔偿责任。</p>
+                    <p>3.用户承诺不虚报服务器配置与不制造虚假流量，若用户虚报服务器配置与制造虚假流量一经查实，本电将立即停止合作，并不退还及支付任何款项。</p>
+                    <p>4.用户保证在双方合作中不对百度提供的合作技术及相关的专用软件接口进行反向工程、反向编译及对专用软件进行内容、功能、逻辑及界面等任一方面的修改。</p>
+                    <p>5.用户承认百度自己存放在服务器上的任何资料、软件、数据等的知识产权均与本人无关，用户无权复制、传播、转让、许可或提供他人使用这些资源，否则应承担相应的法律责任，并赔偿由此给百度造成的所有损失。</p>
+                    <p>6.用户知晓百度仅对自己提供的合作专用软件提供相应服务及保障，用户保证不通过除百度之外的其他任何渠道获取相关软件，否则，正在进行或拥有的相应产品及业务将可能失效，由此而导致的任何纠纷及损失与百度无关。</p>
+                    <p>7.用户保证承担保密义务，未经百度书面同意，用户不得将本次合作任何信息、软件、产品和技术泄露给任何第三方。并且保证双方合作的信息、客户资料安全，否则，百度有权终止本合作项下的所有服务，由此造成的纠纷和损失，由乙方承担。</p>
+                    <p>8.本电金矿（包括但不限于本产品中所含的任何图像、照片、动画、文字和附加程序、修正程序、更新版本和升级版本）的一切所有权和知识产权权均归百度公司拥有。百度金矿特有的标识、版面设计、编排方式等版权均属百度公司享有，未经许可，不得任意复制或转载。</p>
+                </li>
+                <li>
+                    <p>四、账户与密码</p>
+                    <p>1.用户通过指定账户登陆百度金矿，账号在注册之后不可变更。您对于您的账号及密码的保管以及使用该账号和密码所进行的一切行动负有完全的责任。</p>
+                    <p>2.请不要将账号、密码转让或出借给他人使用。因为用户的保管疏忽或其他任何个人行为导致您的账号或密码遭他人非法使用及因此所衍生的任何后果，百度不承担任何责任。</p>
+                </li>
+                <li>
+                    <p>五、协议有效性</p>
+                    <p>1.从用户同意本协议起至用户注销百度金矿服务止。</p>
+                    <p>2.本协议的订立、效力、解释、履行和争议的解决均适用中华人民共和国法律、法规、
+                    电信管理部门的规定和计算机行业的规范。</p>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div id="protocol-btn-group" class="authorization-btn-group">
+        <button class="btn positive-btn">同意</button>
+        <button class="btn negative-btn">不同意</button>
+    </div>
+</div>
+</div>
+
+<!-- 趋势图表格/详细数据-->
+<script>
+var detailList = [{"exchanged_cryst":3770951,"pre_tax_amount":3770951,"after_tax_amount":3770951,"individual_tax":0,"extra_tax":0,"date_timestamp":1525017600,"consume_gold":0},{"exchanged_cryst":4271689,"pre_tax_amount":4271689,"after_tax_amount":4271689,"individual_tax":0,"extra_tax":0,"date_timestamp":1522425600,"consume_gold":0},{"exchanged_cryst":4167674,"pre_tax_amount":4167674,"after_tax_amount":4167674,"individual_tax":0,"extra_tax":0,"date_timestamp":1519747200,"consume_gold":0},{"exchanged_cryst":4420997,"pre_tax_amount":4420997,"after_tax_amount":4420997,"individual_tax":0,"extra_tax":0,"date_timestamp":1517328000,"consume_gold":0},{"exchanged_cryst":3721625,"pre_tax_amount":3721625,"after_tax_amount":3721625,"individual_tax":0,"extra_tax":0,"date_timestamp":1514649600,"consume_gold":0},{"exchanged_cryst":3658172,"pre_tax_amount":3658172,"after_tax_amount":3658172,"individual_tax":0,"extra_tax":0,"date_timestamp":1511971200,"consume_gold":0},{"exchanged_cryst":3604128,"pre_tax_amount":3604128,"after_tax_amount":3604128,"individual_tax":0,"extra_tax":0,"date_timestamp":1509379200,"consume_gold":0},{"exchanged_cryst":1778198,"pre_tax_amount":1778198,"after_tax_amount":1778198,"individual_tax":0,"extra_tax":0,"date_timestamp":1506700800,"consume_gold":0},{"exchanged_cryst":0,"pre_tax_amount":0,"after_tax_amount":0,"individual_tax":0,"extra_tax":0,"date_timestamp":1504108800,"consume_gold":0},{"exchanged_cryst":0,"pre_tax_amount":0,"after_tax_amount":0,"individual_tax":0,"extra_tax":0,"date_timestamp":1501430400,"consume_gold":0},{"exchanged_cryst":0,"pre_tax_amount":0,"after_tax_amount":0,"individual_tax":0,"extra_tax":0,"date_timestamp":1498752000,"consume_gold":0}];
+var outcomeList = [{"date":"2019-04-05","cryst_num":0},{"date":"2019-04-06","cryst_num":0},{"date":"2019-04-07","cryst_num":0},{"date":"2019-04-08","cryst_num":0},{"date":"2019-04-09","cryst_num":0},{"date":"2019-04-10","cryst_num":0},{"date":"2019-04-11","cryst_num":0},{"date":"2019-04-12","cryst_num":0}];
+</script>
+        </div>
+    </div>
+    <div id="footer" class="container">
+        <div class="section">
+            <div id="contact-list">
+                <div class="contact">©2019 bendian &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="http://www.baidu.com/duty/">使用前必读 </a>&nbsp;&nbsp;|
+                    <!-- &nbsp;&nbsp; <a href="/site/help">帮助中心 </a>&nbsp;&nbsp;| -->
+                    &nbsp;&nbsp; 联系我们: bdkjcdn.com
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="JS/jquery-1.12.3.min.js"></script>
+<script src="JS/ua-parser.min.js"></script>
+<script src="JS/uni_login_wrapper.js"></script>
+<script>
+    (function () {
+        var parser = new UAParser().getResult();
+        if (parser.browser.name === 'IE' && (+parser.browser.major) <= 8) {
+            document.getElementById('warning').style.display = 'block';
+        }
+        window.canTransition = true;
+        if (parser.browser.name === 'IE' && (+parser.browser.major) <= 9) {
+            window.canTransition = false;
+        }
+       
+    }());
+</script>
+<script src="JS/common.js"></script>
+<script src="JS/echarts-all.js"></script>
+<script src="JS/account.js"></script>
+</html>

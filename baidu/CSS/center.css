@@ -1,0 +1,191 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+a:hover{
+	text-decoration: none;
+	color: #333;
+}
+.personal-nav{
+    width: 1000px;
+    margin: 0px auto;
+	min-height: 632px;
+    /* margin-left: 250px; */
+}
+nav{	
+	 width: 180px;
+    height: 60px;
+    line-height: 60px;
+}
+#header{
+    background: #f6f6f6;
+    width: 100%;
+}
+nav>ul>li{  
+	font-size: 16px;
+	background: #f6f6f6;
+    text-align: center;
+	color: #555;
+}
+nav>li>label{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+.section{
+    width: 1000px;
+    margin: 0px auto;
+}
+.box{
+	width: 790px;
+    height:auto;
+    margin-left: 220px;
+    margin-top: -35px;
+   display: none;
+}
+.clear{
+    clear: both;
+}
+.personal-nav .active{
+    background-color: #EEC971;
+}
+.account-icon{
+    display: inline-block;
+    width: 4px;
+    height: 16px;
+    background: #cda15f;
+}
+.account-basines{
+    font-size: 14px;
+    margin-top: 32px;
+    margin-left: 10px;
+    padding-bottom: 62px;
+    border-bottom: 1px solid #666;
+}
+.account-basines>.type,.account-basines>.identifit{
+    margin-top: 35px;
+    margin-left: 90px;
+    font-size: 12px;
+    color: #9a9a9a;
+}
+.account-personal h4{
+    font-size: 14px;
+    margin-top: 23px;
+    margin-left: 10px;
+}
+.account-personal ul li{
+    color: #9a9a9a;
+    margin-top: 32px;
+    margin-left: 100px;
+    font-size: 12px;
+
+}
+.account-personal ul li:not(:first-child)>span{
+    letter-spacing: 20px;
+    margin-right: -12px;
+}
+.account-personal ul li input{
+    display: inline-block;
+    width: 150px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* border: 1px solid #9a9a9a; */
+    border: none;
+   
+}
+.revise{
+    width: 80px;
+    height: 28px;
+    background: #EEC971;
+    color: #fff;
+    border: none;
+}
+.account-personal ul li .yzm{
+    display: none;
+    height: 30px;
+    width: 150px;
+    margin-top: 30px;
+    margin-left: 67px;
+    border: 1px solid #9a9a9a;
+}
+.yzm-btn{
+    display: none;
+}
+input:disabled{
+    background: #fff;
+}
+
+.qq-quxiao,.qq-baocun,.iphone-quxiao,.iphone-baocun{
+    display: none;
+}
+.table-list{
+    margin-top: 30px;
+    font-size: 0;
+    color: #555;
+}
+.table-list tr{
+    font-size: 12px;
+}
+.table-list-header{
+    background: #f2f5f7;
+    height: 40px;   
+      
+}
+.table-list-number{
+    padding-left: 20px;
+    width: 60px;
+}
+.table-list-local{
+    width: 164PX;
+}
+.table-list-up{
+    width: 82PX;
+}
+.table-list-storage{
+    width: 82PX;
+}
+.table-list-OS{
+    width: 97PX;
+}
+.table-list-IP{
+    width: 134PX;
+}
+.table-list-status{
+    width: 100PX;
+}
+.table-list-operate{
+    width: 77PX;
+}
+.machineList-pager button{
+    font-size: 16px;
+    height: 34px;
+    line-height: 34px;
+    width: 64px;
+    background: #0074E8;
+    color: #fff;
+    margin-top: 20px;
+    float: right;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: none;   
+}
+.remind{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+#footer{
+    width: 100%;
+}
+
+
+

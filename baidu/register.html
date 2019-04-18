@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/register.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="register-header clearfix">
+            <span><a href="index.html">本电科技</a> </span>
+            <span>欢迎注册</span>
+            <span><a href="login.html">我已经注册，马上登录</a> </span>
+            <p><a href="index.html">bdkjcdn.com</a> </p>
+        </div>
+        <div class="register-content">
+            <div class="reg-form">
+                <div class="phone-field">
+                    <div class="input-box">
+                       <label class="title">手机号码</label> 
+                        <div class="input-wrapper">
+                             <input class="placeholder" type="text" id="mobileAlias" maxlength="11" placeholder="请输入手机号码">
+                             
+                        </div>
+                   </div>    
+               </div>
+               <div class="msg-field">
+                   <div class="input-box clearfix">
+                        <label class="title">手机验证码</label> 
+                        <div class="input-wrapper">
+                             <input class="placeholder" type="text" id="smsCode" maxlength="6" placeholder="输入手机验证码">
+                           
+                        </div>
+                        <a href="" id="sendSmsCode" class="send-msg" 
+                 name=“Preg_index_none_getmobile”>获取短信验证码</a>
+                   </div>    
+               </div>
+               <div class="password-field">
+                   <div class="input-box clearfix">
+                        <label class="title">设置密码</label> 
+                        <div class="input-wrapper">
+                             <input class="placeholder" type="password" id="srtPsw" class="encrypt" name="setPsw" maxlength="20" placeholder="请输入密码">
+                             
+                        </div>
+                   </div>
+               </div>
+               
+            <button class="submit-btn" id="save">提交注册</button>
+            </div>  
+        </div>
+    </div>
+        
+</body>
+</html>
